@@ -57,12 +57,8 @@ void banner() {
 ~~~~~~~~'~~~~~~~'               `\xXXXXx/' \XXX
                                  /XXXXXX\
                                /XXXXXXXXXX\
-                             /XXXXXX/^\XDCAU\
-                                )";
-	red();
-        printf("\n\t\t\t      . DragonHorse 0.1 .\n\n");
+                             /XXXXXX/^\XDCAU\)" << "\n" << endl;
 	reset();
-        
 }
 
 bool FileExist(string filename) {
@@ -91,9 +87,9 @@ bool SearchFind(string filename, string search) {
     }
 }
 
-void ProgressBar(int WaitTime) {
+void ProgressBar(int WaitTime, string FILENAME) {
     int count = 0;
-    cout << "Waiting for " << WaitTime << " Second(s)";
+    cout << "Scanning " << FILENAME << " every " << WaitTime << " Second(s)";
     for(count;count < WaitTime; ++count){
         cout << ". " ;
         fflush(stdout);
@@ -123,28 +119,32 @@ int main( int argc, char *argv[] ){
                     } else {
                         clearLine();
                         green();
-                        printf("\t\t\t   [~] Found string '");
+                        printf("[~] Found string '");
                         reset();
-                        cout << argv[2] << "'" << endl;
+                        cout << argv[2] << "'\n" << endl;
                         fflush(stdout);
                         break;
                     }
-                ProgressBar(WAIT_TIME);
+                ProgressBar(WAIT_TIME, argv[1]);
                 }
             } else {
                 red();
-                cout << "\t       [!] File Paramenter '" << argv[1] << "' does not exist\n" << endl;
+                cout << "[!] File Paramenter '";
+		reset();
+		cout << argv[1]; 
+		red();
+		cout << "' does not exist\n" << endl;
                 reset();
             }
         } else if ( argc > 3 ) {
             red();
-            printf("\t\t      [!] Too many arguments supplied\n\n");
+            printf("[!] Too many arguments supplied\n\n");
             reset();
         } else {
             red();
-            printf("\t     [!] Two arguments expected ");
+            printf("[!] Two arguments expected ");
             reset();
-            printf("[File Input] [Search String]\n\n");
+            printf("./BluFloundr [File] [String]\n\n");
         }
     }
     catch (...) {
