@@ -35,6 +35,28 @@ void reset() {
   printf("\033[0m");
 }
 
+void banner2() {
+        clearScreen();
+	blue();
+        std::cout << R"(         ^
+       //                        ___   ___
+     (*)     "O"                /  _   _  \
+    (*)                           / \ / \
+   (*)    "O"                    |   |   |    |\
+  //                             |O  |O  |___/  \     ++
+ //                               \_/ \_/    \   | ++
+//                              _/      __    \  \
+/     /|   /\                  (________/ __   |_/
+     / |  |  |                   (___      /   |    |\
+    / /  /   |                     \     \|    |___/  |
+   |  | |   /                       \_________      _/   ++++
+  /   | |  |                      ++           \    |
+ |   / /   |                              ++   |   /  +++
+/   /  |   |                               ++ /__/
+~~~ ~~~~   ~~~~~~~~~~~~  ~~~~~~~~~~~~~  ~~~~        ~~+++~~~~ ~)" << "\n" << endl;
+	reset();
+}
+
 void banner() {
         clearScreen();
 	blue();
@@ -108,7 +130,7 @@ void ProgressBar(int WaitTime, string FILENAME) {
 
 int main( int argc, char *argv[] ){
     try {
-        banner();
+        banner2();
         //If correct number of args
         if ( argc == 3 ) {
             if (FileExist(argv[1]) == true) {
@@ -117,7 +139,8 @@ int main( int argc, char *argv[] ){
                     if (findsearch != true) {
                         //Continue
                     } else {
-                        clearLine();
+                        clearScreen();
+		        banner();
                         green();
                         printf("[~] Found string '");
                         reset();
