@@ -1,6 +1,6 @@
 | ![image](https://user-images.githubusercontent.com/63486672/113641162-ad092e00-9642-11eb-8814-9d55299fc177.png) |
 | :------: |
-Collection of personal utilities to make wardriving easier
+🚗 Collection of personal utilities to make wardriving easier
  
 ## 📝 Installation
 
