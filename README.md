@@ -14,9 +14,9 @@ Drop each compiled binary to `/usr/bin/`
 
 ## 🥤 Dr.Grepper Usage
 
-Searches a file for given string, refreshing after a specified time (Default: 3s)
+Searches a file for given string, refreshing after a specified time (Default: 3 seconds)
 ```bash
-sudo drgrepper [input file] [search term] (optional: wait value) 
+sudo drgrepper [input file] [search term] (optional: wait_value) 
 ```
 ## 🕶️ Monset Usage
 
