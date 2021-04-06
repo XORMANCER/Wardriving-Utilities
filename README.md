@@ -24,8 +24,8 @@ Places a given interface into monitor mode or back into managed mode
 ```bash
 sudo monset [interface] [start/stop] 
 ```
-Note: remember to restart your network manager if placing back into managed mdoe
-Syntax: `sudo NetworkManager restart`
+Note: Network manager needs to be restarted when re-entering managed mode  
+`sudo NetworkManager restart`
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
