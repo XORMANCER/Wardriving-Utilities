@@ -4,25 +4,28 @@
  
 ## 📝 Installation
 
-After installing [crystal](https://crystal-lang.org/install/), build main.cr and run the setup file
+After installing [gcc](https://www.cyberciti.biz/faq/debian-linux-install-gnu-gcc-compiler/), build each desired tool
 
 ```bash
-sudo crystal build --release main.cr -o blackmoth
-sudo chmod +x setup.sh
-./setup.sh
+gcc -o drgrepper drgrepper.cpp; gcc -o monset monset.cpp
 ```
 
-The compiled binary will be moved to `/usr/bin/blackmoth`  
-All configuration files are located within `/usr/share/BLACKMOTH`
+Drop each compiled binary to `/usr/bin/`
 
-## 🦋 Usage
+## 🥤 Dr.Grepper Usage
 
+Searches a file for given string, refreshing after a specified time (Default: 3s)
 ```bash
-sudo blackmoth
+sudo drgrepper [input file] [search term] (optional: wait value) 
 ```
-## 💡 Configuration
-Recommended deauth wait time values
-* mdk4: `15` 
-* aireplay-ng: `10`
+## 🕶️ Monset Usage
+
+Places a given interface into monitor mode or back into managed mode
+```bash
+sudo monset [interface] [start/stop] 
+```
+Note: remember to restart your network manager if placing back into managed mdoe
+Syntax: `sudo NetworkManager restart`
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
