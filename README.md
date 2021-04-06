@@ -20,11 +20,12 @@ sudo drgrepper [input file] [search term] (optional: wait value)
 ```
 ## 🕶️ Monset Usage
 
-Places a given interface into monitor mode or back into managed mode
+Enables or disables monitor mode on a given interface
 ```bash
 sudo monset [interface] [start/stop] 
 ```
 Note: Network manager needs to be restarted when re-entering managed mode  
+
 `sudo NetworkManager restart`
 
 ## License
