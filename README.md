@@ -4,10 +4,10 @@
  
 ## 📝 Installation
 
-After installing [gcc](https://www.cyberciti.biz/faq/debian-linux-install-gnu-gcc-compiler/), build each desired tool
+After installing [g++](https://installlion.com/kali/kali/main/g/g++/install/index.html), build each desired tool
 
 ```bash
-gcc -o drgrepper drgrepper.cpp; gcc -o monset monset.cpp
+g++ -o drgrepper drgrepper.cpp; g++ -o monset monset.cpp
 ```
 
 Drop each compiled binary to `/usr/bin/`
