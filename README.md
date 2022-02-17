@@ -12,13 +12,13 @@ g++ -o drgrepper drgrepper.cpp; g++ -o monset monset.cpp
 
 Drop each compiled binary to `/usr/bin/`
 
-## 🥤 Dr.Grepper: Usage
+## 🥤 Dr.Grepper - Usage
 
 Searches a file for given string, refreshing after a specified time (Default: 3 seconds)
 ```bash
 sudo drgrepper [input file] [search term] (optional: wait_value) 
 ```
-## 🕶️ Monset: Usage
+## 🕶️ Monset - Usage
 
 Enables or disables monitor mode on a given interface
 ```bash
