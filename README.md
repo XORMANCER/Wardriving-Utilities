@@ -10,7 +10,12 @@ After installing [g++](https://installlion.com/kali/kali/main/g/g++/install/inde
 g++ -o drgrepper drgrepper.cpp; g++ -o monset monset.cpp
 ```
 
-Drop each compiled binary to `/usr/bin/`
+To install system wide, copy each compiled binary to `/usr/bin/`
+
+```bash
+sudo cp drgrepper /usr/bin/drgrepper
+sudo cp monset /usr/bin/monset
+```
 
 ## 🥤 Dr.Grepper - Usage
 
