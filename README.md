@@ -21,7 +21,7 @@ sudo cp monset /usr/bin/monset
 
 Searches a file for given string, refreshing after a specified time (Default: 3 seconds)
 ```bash
-sudo drgrepper [input file] [search term] (optional: wait_value) 
+drgrepper [input file] [search term] (optional: wait_value) 
 ```
 ## 🕶️ Monset - Usage
 
